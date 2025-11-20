@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="sequential">
+
+    <!-- Título: slide desde abajo -->
+    <slide
+        android:duration="220"
+        android:slideEdge="bottom">
+        <target android:targetId="@id/titleText" />
+    </slide>
+
+    <!-- Descripción: slide desde abajo -->
+    <slide
+        android:duration="220"
+        android:slideEdge="bottom">
+        <target android:targetId="@id/descriptionText" />
+    </slide>
+
+    <!-- ChipGroup: slide desde abajo -->
+    <slide
+        android:duration="200"
+        android:slideEdge="bottom">
+        <target android:targetId="@id/chipGroup" />
+    </slide>
+
+    <!-- FAB: fade -->
+    <fade android:duration="180">
+        <target android:targetId="@id/fab" />
+    </fade>
+
+</transitionSet>

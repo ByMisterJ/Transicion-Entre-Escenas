@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-
-    <!-- Toolbar simple -->
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/topAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:navigationIconTint="@color/white"
-        android:title="Vídeo réplica" />
-
-
-    <!-- Imagen que replica exactamente el fotograma del video -->
     <ImageView
         android:id="@+id/sceneImage"
-        android:layout_width="640px"
-        android:layout_height="1120px"
-        android:layout_marginTop="56dp"
-        android:src="@drawable/escena_frame0"
-        android:contentDescription="Escena"
-        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:transitionName="shared_scene"
-        />
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/escena_frame0"
+        android:contentDescription="@string/app_name"/>
 
+    <!-- Título debajo (primera escena) -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Islas Seychelles"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="#FFFFFFFF"
+        android:textColor="#444444" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

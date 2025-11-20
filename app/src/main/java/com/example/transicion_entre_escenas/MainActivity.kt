@@ -11,14 +11,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Imagen principal (réplica del fotograma)
+        // Imagen principal (origen del shared element)
         val img = findViewById<ImageView>(R.id.sceneImage)
         // Aseguramos que la vista de origen tiene el mismo transitionName
         img.transitionName = "shared_scene"
 
-        img.setOnClickListener { v ->
+        img.setOnClickListener {
             val intent = Intent(this, DetailActivity::class.java)
-            // Shared element transition
+            // pasamos el drawable correcto que nos indicaste
+            intent.putExtra("image_res", R.drawable.escena_frame0)
+
+            // Shared element transition usando el transitionName de la imagen
             val options = ActivityOptions.makeSceneTransitionAnimation(this, img, img.transitionName)
             startActivity(intent, options.toBundle())
         }
