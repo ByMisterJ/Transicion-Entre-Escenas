@@ -1,0 +1,5 @@
+<resources>
+    <!-- Si quieres definiciones en dp en vez de px -->
+    <dimen name="scene_width_px">640px</dimen>
+    <dimen name="scene_height_px">1120px</dimen>
+</resources>
